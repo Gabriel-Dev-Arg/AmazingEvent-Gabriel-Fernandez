@@ -11,14 +11,133 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css"
+        rel="stylesheet">
     <link rel="stylesheet" href="/assets/style/style.css">
     <script src="/index.js"></script>
+    <link rel="shortcut icon" href="/assets/img/favicon.png" type="image/x-icon">
 </head>
 
 <body>
-    <div class="d-flex row">
-      
-        <main>
+    <header>
+        <nav class="navbar navbar-expand-lg  navbar-expand-md text-white  bg-blue " data-bs-theme="dark">
+            <div class="container-fluid ">
+                <a class="navbar-brand" href="#"><img class="logo" src="/assets/img/amazing_brand.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                    <div class="navbar-nav gap-lg-1 text-center  ">
+                        <a class="nav-link border_color" aria-current="page" href="../home.html">Home</a>
+                        <a class="nav-link border_color" href="#">UPCOMING EVENTS</a>
+                        <a class="nav-link border_color" href="../pages/pastEvents.html">PAST EVENTS</a>
+                        <a class="nav-link border_color" href="../pages/contact.html">CONTACT</a>
+                        <a class="nav-link border_color" href="../pages/stats.html">STATS</a>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main class="bg-rose">
+        <div id="carouselExample" class="carousel slide vh-mh-40 ">
+            <div class="carousel-inner text-center bg-primary vh-mh-40 ">
+                <div class="carousel-item active position-relative ">
+                    <img src="/assets/img/optional_banner_1.jpg" class="banner-object-fit banner-relative card-img"
+                        alt="imagen-banner">
+                    <div class="carousel-caption position-absolute  top-10">
+                        <h2 class="banner-caption-text card-title">UpcomingEvents</h2>
+                    </div>
+                </div>
+                <div class="carousel-item position-relative ">
+                    <img src="/assets/img/optional_banner_2.jpg" class="card-img banner-object-fit banner-relative"
+                        alt="...">
+                    <div class="carousel-caption position-absolute  top-10">
+                        <h2 class="banner-caption-text card-title">PastEvents</h2>
+                    </div>
+                </div>
+                <div class="carousel-item position-relative ">
+                    <img src="/assets/img/optional_banner_3.jpg" class="card-img banner-object-fit banner-relative"
+                        alt="...">
+                    <div class="carousel-caption position-absolute  top-10">
+                        <h2 class="banner-caption-text card-title">Contact</h2>
+                    </div>
+                </div>
+                <div class="carousel-item position-relative ">
+                    <img src="/assets/img/optional_banner_4.jpg" class="card-img banner-object-fit banner-relative"
+                        alt="...">
+                    <div class="carousel-caption position-absolute  top-10">
+                        <h2 class="banner-caption-text card-title">Stats</h2>
+                    </div>
+                </div>
+                <div class="carousel-item position-relative ">
+                    <img src="/assets/img/optional_banner_5.jpg" class="card-img banner-object-fit banner-relative"
+                        alt="...">
+                    <div class="carousel-caption position-absolute  top-10">
+                        <h2 class="banner-caption-text card-title">Home</h2>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+
+        </div>
+        <div class="d-flex card mb-3 col-md-12 ">
+            <div class="row g-0 justify-content-center align-content-lg-center vh-h-60">
+                <div class="col-md-4 col-sm-4 col-10 gap-lg-0 mt-3 ">
+                    <img src="/assets/img/cinema.jpg" class="img-fluid " alt="...">
+                </div>
+                <div class="col-md-4 ">
+                    <div class="card-body fs-5 border">
+                        <h5 class="card-title">Avengers</h5>
+                        <p class="card-text">description:"Marvel's Avengers 3d premiere the start of an epic saga with your best superheroes"</p>
+                       <p class="card-text">
+                        category: "Let's go to the cinema"
+                       </p>
+                       <p class="card-text">
+                        place: "Room D!"
+                       </p>
+                       <p class="card-text">
+                        capacity: "9000"
+                       </p>
+                       <p class="card-text">
+                        estimate:9000
+                       </p>
+                       <p class="card-text">
+                        prince:250
+                       </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="d-flex justify-content-between vh-h-10 align-items-center bg-blue p-3">
+        <div class="d-flex gap-2 ">
+            <a href="#">
+                <img class="footer-img" src="/assets/img/facebook.png" alt="">
+            </a>
+            <a href="#">
+                <img class="footer-img" src="/assets/img/instagram.png" alt="">
+
+            </a>
+            <a href="#">
+                <img class="footer-img" src="/assets/img/whatsapp.png" alt="">
+            </a>
+        </div>
+        <div>
+            <h3 class="fs-5 text-light">COHORT</h3>
+        </div>
+    </footer>
 
 
 
@@ -26,28 +145,6 @@
 
 
 
-
-
-
-
-        </main>
-        <footer>
-
-
-
-
-
-
-
-
-        </footer>
-
-
-
-
-
-
-    </div>
 </body>
 
 </html>
