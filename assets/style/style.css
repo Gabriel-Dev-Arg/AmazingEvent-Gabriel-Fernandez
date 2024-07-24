@@ -116,3 +116,7 @@
     height: 200px;
     object-fit: cover;
 }
+
+.altura-parrafo{
+    min-height: 72px;
+}

@@ -203,12 +203,7 @@ for (let i = 0; i < data.events.length; i++) {
     <img class="card-img-top" src="${data.events[i].image}">
     <div class="card-body">
     <h5 class="card-title text-center">${data.events[i].name}</h5>
-    <p class="card-text">${data.events[i].description}</p>
-    <p><strong>Date:</strong> ${data.events[i].date}</p>
-    <p><strong>Category:</strong> ${data.events[i].category}</p>
-    <p><strong>Place:</strong> ${data.events[i].place}</p>
-    <p><strong>Capacity:</strong> ${data.events[i].capacity}</p>
-    <p><strong>Estimate:</strong> ${data.events[i].estimate || "N/A"}</p>
+    <p class="card-text altura-parrafo">${data.events[i].description}</p>
     <div class="d-flex justify-content-between"><p><strong>Price:</strong> $${data.events[i].price}</p>
     <a href="./Details.html" class="btn btn-primary">Details</a></div>
         </div>
