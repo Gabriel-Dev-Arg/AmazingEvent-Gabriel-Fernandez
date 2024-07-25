@@ -207,7 +207,7 @@ for (let i = 0; i < data.events.length; i++) {
                 <img class="card-img-top" src="${data.events[i].image}">
                 <div class="card-body">
                     <h5 class="card-title text-center">${data.events[i].name}</h5>
-                    <p class="card-text altura-parrafo">${data.events[i].description}</p>
+                    <p class="card-text h-parrafo">${data.events[i].description}</p>
                     <div class="d-flex justify-content-between"><p><strong>Price:</strong> $${data.events[i].price}</p><a href="./Details.html" class="btn btn-primary">Details</a></div>
                 </div>
             </div>

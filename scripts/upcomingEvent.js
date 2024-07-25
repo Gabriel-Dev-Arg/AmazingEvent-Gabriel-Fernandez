@@ -194,9 +194,13 @@ const data = {
         },
     ],
 };
+
+//llamamos al documento para agregarle contenido mediante el llamado . getElementById que es que lo llamamos mediante el id
 let futureEventsContainer = document.getElementById("future-events-container");
 
+//en este archivo lo que vamos a hacer especialmente es que en el arreglo , los datos que son del futuro , los reccora y los separe con los otros datos que son del pasado . 
 for (let i = 0; i < data.events.length; i++) {
+    //
     let eventDate = data.events[i].date;
     if (eventDate >= data.currentDate) {
         let tarjeta = document.createElement("div");
@@ -207,7 +211,7 @@ for (let i = 0; i < data.events.length; i++) {
                 <img class="card-img-top" src="${data.events[i].image}">
                 <div class="card-body">
                     <h5 class="card-title text-center">${data.events[i].name}</h5>
-                    <p class="card-text altura-parrafo">${data.events[i].description}</p>
+                    <p class="card-text h-parrafo">${data.events[i].description}</p>
                     <div class="d-flex justify-content-between"><p><strong>Price:</strong> $${data.events[i].price}</p><a href="./Details.html" class="btn btn-primary">Details</a></div>
                 </div>
             </div>
