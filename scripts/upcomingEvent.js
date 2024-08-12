@@ -239,7 +239,7 @@ function filterEvents() {
     const filteredEvents = data.events.filter(event => {
         const matchesSearch = event.name.toLowerCase().includes(searchTerm) || event.description.toLowerCase().includes(searchTerm);
         const matchesCategory = selectedCategories.length === 0 || selectedCategories.includes(event.category);
-        return event.date >= data.currentDate && matchesSearch && matchesCategory;
+        return event.date > data.currentDate && matchesSearch && matchesCategory;
     });
 
     renderEvents(filteredEvents);
@@ -276,7 +276,7 @@ function renderEvents(events) {
 }
 
 
-document.getElementById('searchInput').addEventListener('button', filterEvents);
+document.getElementById('searchButton').addEventListener('click', filterEvents);
 document.querySelectorAll(".form-check-input").forEach(checkbox => checkbox.addEventListener('change', filterEvents));
 
 
