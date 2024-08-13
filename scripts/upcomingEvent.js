@@ -261,7 +261,7 @@ function renderEvents(events) {
             tarjeta.innerHTML = `
                 <div class="card m-1 width_18rem ">
                     <img class="card-img-top" src="${event.image}">
-                    <div class="card-body">
+                    <div class="card-body ">
                         <h5 class="card-title text-center">${event.name}</h5>
                         <p class="card-text h-parrafo">${event.description}</p>
                         <div class="d-flex justify-content-between"><p><strong>Price:</strong> $${event.price}
