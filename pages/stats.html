@@ -11,17 +11,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/assets/style/style.css">
-    <script src="/index.js"></script>
     <link rel="shortcut icon" href="/assets/img/favicon.png" type="image/x-icon">
 </head>
 
-<body>
-    <header >
-        <nav class="navbar navbar-expand-lg  navbar-expand-md text-white  bg-blue "
-            data-bs-theme="dark">
-            <div class="container-fluid ">
+<body class="d-flex flex-column min-vh-100">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-expand-md text-white bg-blue" data-bs-theme="dark">
+            <div class="container-fluid">
                 <a class="navbar-brand" href="#"><img class="logo" src="/assets/img/amazing_brand.png" alt="logo"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
@@ -29,7 +27,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-                    <div class="navbar-nav gap-lg-1 text-center ">
+                    <div class="navbar-nav gap-lg-1 text-center">
                         <a class="nav-link border_color" aria-current="page" href="/home.html">Home</a>
                         <a class="nav-link border_color" href="../pages/upcomingEvents.html">UPCOMING EVENTS</a>
                         <a class="nav-link border_color" href="../pages/pastEvents.html">PAST EVENTS</a>
@@ -40,115 +38,91 @@
             </div>
         </nav>
     </header>
-        <main class=" min-vh-100 bg-rose">
-            <div id="carouselExample" class="carousel slide vh-mh-40 ">
-                <div class="carousel-inner text-center bg-primary vh-mh-40 ">
-                    <div class="carousel-item active position-relative ">
-                        <img src="/assets/img/optional_banner_4.jpg" class="banner-object-fit banner-relative card-img" alt="imagen-luces">
-                        <div class="carousel-caption position-absolute  top-10">
-                            <h2 class="banner-caption-text card-title">Stats</h2>
-                        </div>
-                    </div>
-                    <div class="carousel-item position-relative ">
-                        <img src="/assets/img/optional_banner_5.jpg" class="card-img banner-object-fit banner-relative" alt="imagen-microfono">
-                        <div class="carousel-caption position-absolute  top-10">
-                            <h2 class="banner-caption-text card-title">Home</h2>
-                        </div>
-                    </div>
-                    <div class="carousel-item position-relative ">
-                        <img src="/assets/img/optional_banner_1.jpg" class="card-img banner-object-fit banner-relative" alt="imagen-platoComida">
-                        <div class="carousel-caption position-absolute  top-10">
-                            <h2 class="banner-caption-text card-title">UpcomingEvents</h2>
-                        </div>
-                    </div>
-                    <div class="carousel-item position-relative ">
-                        <img src="/assets/img/optional_banner_2.jpg" class="card-img banner-object-fit banner-relative" alt="imagen-ascientoCine">
-                        <div class="carousel-caption position-absolute  top-10">
-                            <h2 class="banner-caption-text card-title">PastEvents</h2>
-                        </div>
-                    </div>
-                    <div class="carousel-item position-relative ">
-                        <img src="/assets/img/optional_banner_3.jpg" class="card-img banner-object-fit banner-relative" alt="imagen-edificio">
-                        <div class="carousel-caption position-absolute  top-10">
-                            <h2 class="banner-caption-text card-title">Contact</h2>
-                        </div>
+
+    <main class="flex-grow-1 bg-rose d-flex flex-column">
+        <div id="carouselExample" class="carousel slide vh-mh-40">
+            <div class="carousel-inner text-center bg-primary vh-mh-40">
+                <div class="carousel-item active position-relative">
+                    <img src="/assets/img/optional_banner_4.jpg" class="banner-object-fit banner-relative card-img" alt="imagen-luces">
+                    <div class="carousel-caption position-absolute top-10">
+                        <h2 class="banner-caption-text card-title">Stats</h2>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+                <!-- Otros elementos carousel-item... -->
             </div>
-            <div class="container mt-4 vh-h-60 align-content-center">
-                <table class="table table-bordered table-info ">
-                        <tr>
-                            <th colspan="3" class=" bg-secondary">Events Statistics</th>
-                        </tr>
-                    
-                    <tbody>
-                        <tr class="table-primary">
-                            <td>Events with highest % of assistance</td>
-                            <td>Events with lowest % of assistance</td>
-                            <td>Events with lager capacity</td>
-                        </tr>
-                        <tr class="table-primary">
-                            <td>lorem</td>
-                            <td>lorem</td>
-                            <td>lorem</td>
-                        </tr>
-                        <tr>
-                            <th colspan="3" class="bg-secondary">Upcoming events statistics by category</th>
-                        </tr>
-                        <tr class="table-primary">
-                            <td>Categories</td>
-                            <td>Revenues</td>
-                            <td>Porcentage of assistance</td>
-                        </tr>
-                        <tr class="table-primary">
-                            <td>lorem</td>
-                            <td>lorem</td>
-                            <td>lorem</td>
-                        </tr>
-                        <tr>
-                            <th colspan="3" class=" bg-secondary">Past events statistics by category</th>
-                        </tr>
-                        <tr class="table-primary">
-                            <td>Categories</td>
-                            <td>Revenues</td>
-                            <td>Porcentage of assistance</td>
-                        </tr>
-                        <tr class="table-primary">
-                            <td>lorem</td>
-                            <td>lorem</td>
-                            <td>lorem</td>
-                        </tr>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <div class="container mt-4">
+            <table class="table table-bordered table-info">
+                <thead>
+                    <tr>
+                        <th colspan="3" class="bg-secondary">Events Statistics</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="table-primary">
+                        <td id="highest-assistance">Events with highest % of assistance</td>
+                        <td id="lowest-assistance">Events with lowest % of assistance</td>
+                        <td id="largest-capacity">Events with largest capacity</td>
+                    </tr>
+                    <tr class="table-primary">
+                        <td id="highest-assistance-data">lorem</td>
+                        <td id="lowest-assistance-data">lorem</td>
+                        <td id="largest-capacity-data">lorem</td>
+                    </tr>
+                    <tr>
+                        <th colspan="3" class="bg-secondary">Upcoming events statistics by category</th>
+                    </tr>
+                    <tr class="table-primary">
+                        <td>Categories</td>
+                        <td>Revenues</td>
+                        <td>Percentage of assistance</td>
+                    </tr>
+                    <tbody id="upcoming-events-stats">
+                        <!-- Filas se llenarán aquí -->
                     </tbody>
-                </table>
-            </div>
-        </main>
-        <footer class="d-flex justify-content-between vh-h-10 align-items-center bg-blue p-3">
-            <div class="d-flex gap-2 ">
-                <a href="#">
-                    <img class="footer-img" src="/assets/img/facebook.png" alt="logo-facebook">
-                </a>
-                <a href="#">
-                    <img class="footer-img" src="/assets/img/instagram.png" alt="logo-instagram">
-                </a>
-                <a href="#">
-                    <img class="footer-img" src="/assets/img/whatsapp.png" alt="logo-whatsapp">
-                </a>
-            </div>
-            <div>
-                <h3 class="fs-5 text-light">COHORT</h3>
-            </div>
-        </footer>
+                    <tr>
+                        <th colspan="3" class="bg-secondary">Past events statistics by category</th>
+                    </tr>
+                    <tr class="table-primary">
+                        <td>Categories</td>
+                        <td>Revenues</td>
+                        <td>Percentage of assistance</td>
+                    </tr>
+                    <tbody id="past-events-stats">
+                        <!-- Filas se llenarán aquí -->
+                    </tbody>
+                </tbody>
+            </table>
+        </div>
+    </main>
 
+    <footer class="d-flex justify-content-between align-items-center bg-blue p-3">
+        <div class="d-flex gap-2">
+            <a href="#">
+                <img class="footer-img" src="/assets/img/facebook.png" alt="logo-facebook">
+            </a>
+            <a href="#">
+                <img class="footer-img" src="/assets/img/instagram.png" alt="logo-instagram">
+            </a>
+            <a href="#">
+                <img class="footer-img" src="/assets/img/whatsapp.png" alt="logo-whatsapp">
+            </a>
+        </div>
+        <div>
+            <h3 class="fs-5 text-light">COHORT</h3>
+        </div>
+    </footer>
+
+    <script type="module" src="/scripts/stats.js"></script>
+    <script type="module" src="../modules/funciones.js"></script>
 </body>
-
 </html>
