@@ -44,6 +44,68 @@ export function fetchEventsData() {
     });
 }
 
+export function fetchDataAndProcess() {
+  return fetch('https://aulamindhub.github.io/amazing-api/events.json')
+      .then(response => response.json())
+      .then(data => {
+          const events = data.events;
+          const currentDate = new Date("2023-03-10");
+          const upcomingEvents = events.filter(event => new Date(event.date) > currentDate);
+          const pastEvents = events.filter(event => new Date(event.date) <= currentDate);
+
+          return { events, upcomingEvents, pastEvents };
+      })
+      .catch(error => {
+          console.error("Error fetching data:", error);
+          throw error;
+      });
+}
+
+export function groupByCategory(events) {
+  const categoryMap = {};
+  events.forEach(event => {
+      if (!categoryMap[event.category]) {
+          categoryMap[event.category] = {
+              revenue: 0,
+              assistancePercentage: 0,
+              totalCapacity: 0,
+              totalAssistance: 0
+          };
+      }
+
+      const categoryStats = categoryMap[event.category];
+      categoryStats.revenue += event.price * (event.assistance || event.estimate);
+      categoryStats.totalCapacity += event.capacity;
+      categoryStats.totalAssistance += event.assistance || event.estimate;
+  });
+
+  for (const category in categoryMap) {
+      const stats = categoryMap[category];
+      stats.assistancePercentage = ((stats.totalAssistance / stats.totalCapacity) * 100).toFixed(2);
+  }
+
+  return categoryMap;
+}
+
+export function populateCategoryStats(container, categories) {
+  container.innerHTML = ''; 
+  for (const category in categories) {
+      const row = document.createElement('tr');
+      const categoryCell = document.createElement('td');
+      categoryCell.textContent = category;
+      const revenueCell = document.createElement('td');
+      revenueCell.textContent = `$${categories[category].revenue.toFixed(2)}`;
+      const percentageCell = document.createElement('td');
+      percentageCell.textContent = `${categories[category].assistancePercentage}%`;
+
+      row.appendChild(categoryCell);
+      row.appendChild(revenueCell);
+      row.appendChild(percentageCell);
+      container.appendChild(row);
+  }
+}
+
+
 export function createNavChecks(events, container) {
   if (!container) return;
 
