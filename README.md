@@ -1,4 +1,4 @@
 # AmazingEvent-Gabriel-Fernandez
 
-Pagina : https://moonlit-sfogliatella-16cf2e.netlify.app/home
+Pagina : https://remarkable-praline-8bae2f.netlify.app/
 
